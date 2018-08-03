@@ -1,0 +1,9 @@
+# Ignore all
+*
+
+# Don't ignore directories
+!*/
+
+!*.c
+!*.md
+!*.gitignore
