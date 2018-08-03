@@ -1,0 +1,14 @@
+MVI A, DCH
+MVI B, 00H
+MVI C, 08H
+
+loop:
+RAR
+JNC move
+INR B
+
+move:
+DCR C
+JNZ loop
+
+HLT

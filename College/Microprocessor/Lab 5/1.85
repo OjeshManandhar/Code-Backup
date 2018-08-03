@@ -1,0 +1,15 @@
+;WAP to copy 5 8-bit data from 8000H to 9000H
+
+LXI B, 8000H
+LXI D, 9000H
+MVI H, 05H
+
+loop:
+	LDAX B
+	STAX D
+
+	INX B
+	INX D
+	DCR H
+	JNZ loop
+HLT

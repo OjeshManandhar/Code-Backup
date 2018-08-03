@@ -1,0 +1,12 @@
+LXI B, AABBH
+LXI D, CCDDH
+
+MOV H, B
+MOV L, C
+
+XCHG
+
+MOV B, H
+MOV C, L
+
+HLT

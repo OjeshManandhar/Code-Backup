@@ -1,0 +1,39 @@
+LDA 2000H
+MOV B, A
+
+ANI 04H
+RRC
+RRC
+MOV E, A
+
+MOV A, B
+ANI 40H
+RRC
+RRC
+RRC
+RRC
+RRC
+RRC
+
+RAR
+MOV A, B
+JC change_zero
+ANI FBH
+JMP out_zero
+change_zero:
+	ORI 04H
+out_zero:
+	MOV B, A
+
+MOV A, E
+RAR
+MOV A, B
+JC change_six
+ANI BFH
+JMP out_six
+change_six:
+	ORI 40H
+out_six:
+	MOV B, A
+
+HLT

@@ -1,0 +1,6 @@
+MVI A, 5AH
+STA 9030H
+
+ANI 10H
+
+HLT

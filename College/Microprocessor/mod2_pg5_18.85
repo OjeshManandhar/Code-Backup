@@ -1,0 +1,13 @@
+MVI B, 01H
+
+MOV A, B
+
+RAR
+
+JC odd
+
+MOV H, B
+
+odd:
+
+HLT

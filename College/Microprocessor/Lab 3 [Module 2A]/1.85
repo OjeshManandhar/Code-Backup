@@ -1,0 +1,8 @@
+MVI A, 34H
+STA 9030H
+
+MVI B, 92H
+
+ANA B
+
+HLT

@@ -1,0 +1,27 @@
+;Two 8-bit datas are stored at 2000H and 2001H.
+;Multiply them and stored the result in 3000H ;and 3001H
+
+LDA 2000H
+MOV B, A
+
+LDA 2001H
+MOV D, A
+
+MVI A, 00H
+
+loop:
+	ADD B
+	
+	JNC no_carry
+
+	INR C
+
+	no_carry:
+		DCR D
+		JNZ loop
+
+STA 3001H
+MOV A, C
+STA 3000H
+
+HLT

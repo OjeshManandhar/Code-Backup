@@ -1,0 +1,7 @@
+LXI H, 4400H
+
+PUSH H
+
+POP PSW
+
+HLT

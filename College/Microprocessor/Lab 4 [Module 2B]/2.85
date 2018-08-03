@@ -1,0 +1,18 @@
+;WAP to find the 2's compliment of a
+;16-bit number stored at reg. pair B
+
+LXI B, F453H
+
+MOV A, B
+CMA
+MOV H, A
+
+MOV A, C
+CMA
+MOV L, A
+
+LXI D, 0001H
+
+DAD D
+
+HLT

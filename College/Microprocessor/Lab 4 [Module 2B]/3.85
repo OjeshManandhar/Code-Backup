@@ -1,0 +1,23 @@
+;WAP to find XOR without using XRA/XRI of two
+;numbers
+
+MVI B, 2CH
+MVI D, 6AH
+
+MOV A, B
+CMA
+MOV C, A
+
+MOV A, D
+CMA
+MOV E, A
+
+ANA B
+MOV H, A
+
+MOV A, C
+ANA D
+
+ADD H
+
+HLT

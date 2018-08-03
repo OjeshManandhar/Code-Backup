@@ -1,0 +1,14 @@
+;WAP to find the 2's compliment of a
+;number stored at reg. B
+
+MVI B, 32H
+
+MOV A, B
+
+CMA
+
+ADI 01H
+
+MOV B, A
+
+HLT

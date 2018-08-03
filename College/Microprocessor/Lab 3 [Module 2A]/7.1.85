@@ -1,0 +1,8 @@
+MVI A, 45H
+STA 3000H
+
+ORI 10H
+
+ANI BFH
+
+HLT

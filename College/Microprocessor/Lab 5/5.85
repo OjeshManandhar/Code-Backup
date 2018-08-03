@@ -1,0 +1,24 @@
+;Transfer data from 4280H to 4260H if no. is
+;less than 50 else store 00H in destination.
+;Assume 5 datas
+
+LXI B, 4280H
+LXI D, 4260H
+MVI H, 05H
+
+loop:
+	LDAX B
+
+	CPI 50H
+	JC copy
+
+	MVI A, 00H
+
+	copy:
+		STAX D
+
+	INX B
+	INX D
+	DCR H
+	JNZ loop
+HLT

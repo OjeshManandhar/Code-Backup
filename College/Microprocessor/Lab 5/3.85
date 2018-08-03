@@ -1,0 +1,35 @@
+;Find no. of +ve, -ve & 0 in the series of data.
+;No. of terms is in location 2031H and series
+;starts from next location
+
+LXI D, 2031H
+MVI B, 00H	;zero
+MVI L, 00H	;positive
+MVI H, 00H	;negative
+
+LDAX D
+MOV C, A
+
+INX D
+
+loop:
+	LDAX D
+
+	CPI 00H
+
+	JZ zero
+	JNC negative
+
+	INR L
+	JMP transfer
+
+	zero:
+		INR B
+		JMP transfer
+	negative:
+		INR H
+	transfer:
+		INX D
+		DCR C
+		JNZ loop
+HLT

@@ -1,0 +1,16 @@
+;WAP to swap bits D6 & D2 of a 8-bit no. stored
+;at 2000H
+
+LDA 2000H
+MOV B, A
+
+ANI 44H
+
+JPE finish
+	MOV A, B
+	XRI 44H
+	MOV B, A
+
+finish:
+
+HLT

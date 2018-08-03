@@ -1,0 +1,24 @@
+;WAP to divide no. stored at 4150H by number
+;stored at 4151H. Store the quotient at 4153H
+;and remainder at 4152H.
+
+LDA 4151H
+MOV B, A
+
+LDA 4150H
+
+MVI C, 00H
+
+loop:
+	CMP B
+	JC exit
+	SUB B
+	INR C
+	JMP loop
+
+exit:
+	STA 4152H
+	MOV A, C
+	STA 4153H
+
+HLT

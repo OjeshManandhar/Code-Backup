@@ -1,0 +1,31 @@
+;O/P => A (HEX)
+;I/P => 73 (BCD) IN A
+
+MVI A, 73
+
+MVI L, 0AH
+
+MOV B, A
+
+ANI 0FH
+
+MOV C, A
+
+MOV A, B
+ANI F0H
+RRC
+RRC
+RRC
+RRC
+MOV B, A
+
+MVI A, 00H
+loop:
+	ADD B
+
+	DCR L
+	JNZ loop
+
+ADD C
+
+HLT

@@ -1,0 +1,33 @@
+;WAP to transfer 8-bit data from 9000H to 9050H
+;if D6 = 1 & D2 = 0. Otherwise transfer data by
+;changing D5 & D3. Assume 5 datas
+
+LXI B, 9000H
+LXI D, 9050H
+MVI H, 05H
+
+loop:
+	LDAX B
+	MOV L, A
+
+	ANI 44H
+
+	CPI 40H
+	JNZ change
+
+	MOV A, L
+	JMP transfer
+
+	change:
+		MOV A, L
+		XRI 28H
+
+	transfer:
+		STAX D
+
+		INX B
+		INX D
+		DCR H
+		JNZ loop
+
+HLT

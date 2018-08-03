@@ -1,0 +1,15 @@
+LDA 8123H
+
+MOV B, A
+
+ANI 48H
+
+CPI 08H
+
+JNZ exit
+
+MOV H, B
+
+exit:
+
+HLT

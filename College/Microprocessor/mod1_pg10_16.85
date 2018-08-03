@@ -1,0 +1,11 @@
+MVI D, 12H
+MVI H, 34H
+
+MOV A, H
+SUB D
+
+DAA
+
+MOV H, A
+
+HLT

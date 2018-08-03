@@ -1,0 +1,12 @@
+MVI A, 3DH
+STA 9025H
+
+ANI 20H
+
+;JZ halt
+
+MVI A, 01H
+STA 9030H
+
+;halt:
+HLT

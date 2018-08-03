@@ -1,0 +1,15 @@
+MVI A, A4H
+STA 8082H
+
+MOV B, A
+
+MVI A, 36H
+STA 8081H
+
+CMP B
+
+;BREAK
+
+SUB B
+
+HLT

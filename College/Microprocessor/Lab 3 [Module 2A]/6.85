@@ -1,0 +1,5 @@
+MVI A, 45H
+
+XRI FFH
+
+HLT

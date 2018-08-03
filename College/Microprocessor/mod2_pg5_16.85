@@ -1,0 +1,22 @@
+MVI A, 3CH
+MOV B, A
+
+loop:
+	MOV H, A
+
+	CALL deLay
+
+	RAR
+
+	CMP B
+
+	JNZ loop
+
+HLT
+
+delay:
+	NOP
+	NOP
+	NOP
+	NOP
+RET

@@ -1,0 +1,22 @@
+;A 8-bit number is stored at 3000H. WAP to store
+;its multiplication table starting from 4000H
+
+LXI H, 4000H
+
+LDA 3000H
+MOV B, A
+
+MVI D, 0AH
+
+MVI A, 00H
+
+loop:
+	ADD B
+
+	MOV M, A
+
+	INX H
+	DCR D
+	JNZ loop
+
+HLT

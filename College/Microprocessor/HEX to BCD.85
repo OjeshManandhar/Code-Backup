@@ -1,0 +1,34 @@
+;O/P (BCD)
+;2030		  2031		2032
+;100's place  10's place	1's place
+
+;I/P => 73 (HEX) IN A
+
+MVI A, 73H
+
+CALL PWRTEN
+
+HLT
+
+PWRTEN:
+	LXI H, 2030H
+	MVI B, 64H
+	CALL BINBCD
+	MOV M, D
+	INX H
+	MVI B, 0AH
+	CALL BINBCD
+	MOV M, D
+	INX H
+	MOV M, A
+	RET
+
+BINBCD:
+	MVI D, 00H
+	NEXT:
+		INR D
+		SUB B
+		JNC NEXT
+	DCR D
+	ADD B
+	RET

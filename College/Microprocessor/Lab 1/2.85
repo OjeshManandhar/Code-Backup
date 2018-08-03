@@ -1,0 +1,4 @@
+MVI B, 85H
+MVI D, 0AH
+
+HLT

@@ -1,0 +1,7 @@
+LXI B, 203FH
+LXI D, 8190H
+
+MOV H, B
+MOV L, C
+
+HLT

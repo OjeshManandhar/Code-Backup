@@ -1,0 +1,23 @@
+;Add two tables and strore in third table
+;Source 2000H & 3000h
+;Destination 4000H
+
+LXI H, 2000H
+LXI B, 3000H
+LXI D, 4000H
+
+loop:
+	PUSH D
+	LDAX B
+	MOV D, A
+	MOV A, M
+	ADD D
+	POP D
+	STAX D
+	INX H
+	INX B
+	INX D
+	MOV A, E
+	CPI 0AH
+	JNZ loop
+HLT

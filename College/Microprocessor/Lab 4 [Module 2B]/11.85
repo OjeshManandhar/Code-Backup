@@ -1,0 +1,17 @@
+PUSH PSW
+
+POP H
+
+MOV A, H
+
+ORI 10H
+
+ANI FBH
+
+MOV H, A
+
+PUSH H
+
+POP PSW
+
+HLT
