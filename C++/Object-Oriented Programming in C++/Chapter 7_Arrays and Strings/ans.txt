@@ -1,0 +1,41 @@
+pg 311
+1. d. and index number
+2. same
+3. double doubleArray[100];
+4. 0 to 9
+5. cout << doubleArray[j];
+6. c. The eighth
+7. int coins[] = {penny, nickel, dime, quarter, half-dollar, dollar};
+8. d. surrounded by brackets
+9. twoD[2][4]
+10. True
+11. float [][3] = {
+					{52, 27, 83},
+					{94, 73, 49},
+					{3, 6, 1}
+				   }
+12. base address
+13. a. accesses exactly the same array as the calling program
+    d. refers to the array using a different name than that used by the calling program
+14. creates an array named emplist with size 1000 of type employee
+15. emplist[16].salary
+16. d. the last data item to be removed
+17. bird manybirds[50]
+18. false
+19. manybirds[26].cheep();
+20. array of type char
+21. char city[21]
+22. const string dextrose = “C6H12O6-H2O”;
+23. true
+24. d. the cin.get() function with three arguments
+25. blank = name;
+26. class dog
+    {
+		string breed;
+		int age;
+	}
+27. false
+28. b. can be copied with the assignment operator.
+    c. do not require memory management.
+29. int n = s1.find("cat");
+30. s1.insert(12, "cat");
