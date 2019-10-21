@@ -12,7 +12,7 @@ MATLAB R2016a for [Computer Organization and Architecture (COA)](College/Compute
 
 [8085 simulator](College/Microprocessor/8085)for the programs in [Microprocessor](College/Microprocessor). To install the simulator run **SETUP.exe**. (Tested in Windows 7)
 
-[SWI-Prolog](College/Microprocessor/Artificial%20Intelligence%20(AI)/swipl-8.0.2-1.x64.exe) for the lab programs in [Artificial Intelligence (AI)](College\Artificial Intelligence (AI))
+[SWI-Prolog](College/Artificial%20Intelligence%20(AI)/swipl-8.0.2-1.x64.exe) for the lab programs in [Artificial Intelligence (AI)](College/Artificial%20Intelligence%20(AI))
 
 ### Books used
 + **Let Us C Thirteenth Edition** by *Yashavant P. Kanetkar* for [Let Us C]({C}/Let%20Us%20C)
