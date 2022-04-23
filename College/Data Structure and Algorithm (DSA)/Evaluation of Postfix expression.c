@@ -69,7 +69,7 @@ int main()
 
         if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
             push(value(ch));
-        else if ((ch == '+') || (ch == '-') || (ch == '*') || (ch == '/'))
+        else if ((ch == '+') || (ch == '-') || (ch == '*') || (ch == '/') || (ch == '^') || (ch == '%'))
         {
             op_1 = pop();
             op_2 = pop();
@@ -121,6 +121,10 @@ float calculate(const float op_2, const float op_1, const char op)
         ans =  op_2 * op_1;
     else if (op == '/')
         ans =  op_2 / op_1;
+    else if (op == '^')
+        ans =  op_2 ^ op_1;
+    else if (op == '%')
+        ans =  op_2 % op_1;
 
     return ans;
 }
