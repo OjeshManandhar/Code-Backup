@@ -50,13 +50,13 @@ int main()
                 else
                     while (1)
                     {
-                        if (peek() == '(')
+                        if (check_if_op(peek()) == 1 && find_precedence(ch, peek()) <= 0)
+                            add_in_p(pop());
+                        else
                         {
                             push(ch);
                             break;
                         }
-                        else
-                            add_in_p(pop());
 
                         printf("%-2d %c %-6c %c ", ++counter, 179, ch, 179);
                         traverse();
